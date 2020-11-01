@@ -1,49 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Splash from "../../portland-splash.jpg";
-import logo from "../../logo.svg";
 import "./Home.css";
-import { Icon, Image, Menu, Sidebar, MenuItem, Card, Grid, GridRow } from "semantic-ui-react";
-import Typewriter from "typewriter-effect";
+import { Icon, Image, Menu, Sidebar, MenuItem, Card, } from "semantic-ui-react";
+import LeftSidebar from "../LeftSidebar/LeftSidebar";
 
 function Home() {
 
   return (
     <>
-      {/* <Sidebar.Pushable as={Segment}> */}
-      <Sidebar
-        as={Menu}
-        animation="overlay"
-        direction="left"
-        icon="labeled"
-        inverted
-        vertical
-        visible="true"
-        width="thin"
-        borderless="true"
-        style={{
-          backgroundColor: "rgba(0, 0, 0, 0.5)",
-          border: "0",
-          boxShadow: "none"
-        }}
-      >
-        <MenuItem
-          style={{ borderBottom: "4px solid black", marginBottom: "25%" }}
-        >
-          <Image src={logo} />
-        </MenuItem>
-        <Menu.Item as="a" href="/">
-          <Icon name="home" />
-        </Menu.Item>
-        <Menu.Item as="a" href="/about">
-          <Icon name="user" />
-        </Menu.Item>
-        <Menu.Item as="a" href="/contact">
-          <Icon name="address book" />
-        </Menu.Item>
-        <Menu.Item as="a" href="/portfolio">
-          <Icon name="envelope" />
-        </Menu.Item>
-      </Sidebar>
+
+      <LeftSidebar/>
 
       <Sidebar
         as={Menu}
