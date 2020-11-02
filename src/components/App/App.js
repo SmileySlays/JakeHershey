@@ -4,6 +4,7 @@ import Home from "../Home/Home";
 import About from "../About/About";
 import Portfolio from "../Portfolio/Portfolio";
 import Contact from "../Contact/Contact";
+import ErrorPage from "../ErrorPage/ErrorPage";
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
         <Route path="/about" component={About}/>
         <Route path="/portfolio" component={Portfolio}/>
         <Route path="/contact" component={Contact}/>
+        <Route path="*" component={ErrorPage}/>
       </Switch>
     );
 }
