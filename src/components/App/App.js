@@ -9,7 +9,7 @@ import ErrorPage from "../ErrorPage/ErrorPage";
 class App extends Component {
   render() {
     return (
-      <HashRouter basename="/">
+      < HashRouter basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route path="/about" component={About}/>
