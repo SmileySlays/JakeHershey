@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, HashRouter } from "react-router-dom";
 import Home from "../Home/Home";
 import About from "../About/About";
 import Portfolio from "../Portfolio/Portfolio";
@@ -9,6 +9,7 @@ import ErrorPage from "../ErrorPage/ErrorPage";
 class App extends Component {
   render() {
     return (
+      <HashRouter basename="/">
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route path="/about" component={About}/>
@@ -16,6 +17,7 @@ class App extends Component {
         <Route path="/contact" component={Contact}/>
         <Route path="*" component={ErrorPage}/>
       </Switch>
+      </HashRouter>
     );
 }
 }
